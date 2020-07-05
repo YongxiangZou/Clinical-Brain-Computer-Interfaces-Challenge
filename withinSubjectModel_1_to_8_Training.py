@@ -51,7 +51,7 @@ def generate_within_training_data(i):
     ### selecting 15 trails for test model, 65 trails for training
     trials_index = np.load("./withinSubjectModel_saved/subject_"+str(i+1)+"_trials_index.npy")
     test_trials_index = trials_index[:16]
-    train_trials_index = trials_index[16:]
+    train_trials_index = trials_index[:]
 
     filted_test_x = filted_data[:,test_trials_index]
     filted_test_y = filted_target[:,test_trials_index]
